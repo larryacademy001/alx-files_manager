@@ -2,8 +2,7 @@ module.exports = {
   env: {
     browser: false,
     es6: true,
-    jest: false,
-    mocha: true,
+    jest: true,
   },
   extends: [
     'airbnb-base',
@@ -12,7 +11,6 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
-    request: 'readonly',
   },
   parserOptions: {
     ecmaVersion: 2018,
@@ -22,7 +20,6 @@ module.exports = {
   rules: {
     'max-classes-per-file': 'off',
     'no-underscore-dangle': 'off',
-    'no-console': 'off',
     'no-shadow': 'off',
     'no-restricted-syntax': [
       'error',
@@ -30,6 +27,7 @@ module.exports = {
       'WithStatement',
     ],
   },
+  ignorePatterns: ['*.test.js'],
   overrides: [
     {
       files: ['*.js'],
